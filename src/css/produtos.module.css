@@ -1,0 +1,146 @@
+body,
+ul,
+a,
+h1,
+p,
+img,
+input {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.produtosBg {
+  background: #ffffff;
+  margin: 0px auto;
+}
+
+.produtosContainer {
+  background: #e5e5e5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1100px;
+  gap: 30px 20px;
+  margin: 0 auto;
+  justify-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.produto {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+  border-radius: 8px 8px;
+  height: 345px;
+  width: 260px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  align-content: space-between;
+  justify-items: center;
+}
+
+.produto img {
+  height: 180px;
+  grid-column: 1/5;
+  margin-top: 10px;
+}
+
+.produto .titulo {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1rem;
+  color: #2c2c2c;
+  line-height: 1;
+  text-align: left;
+  margin-left: 10px;
+  width: 120px;
+  grid-column: 1/3;
+}
+.produto .preco {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  color: #ffffff;
+  text-align: right;
+  background: #373737;
+  border-radius: 5px;
+  padding: 4px 8px;
+  max-width: 5rem;
+  max-height: 1rem;
+  justify-self: end;
+  margin-right: 10px;
+  grid-column: 3/5;
+}
+.produto .descricao {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #2c2c2c;
+  text-align: left;
+  grid-column: 1/5;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.comprar {
+  display: flex;
+  background: #373737;
+  border-radius: 0px 0px 8px 8px;
+  grid-column: 1/5;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.comprar:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.comprar .input {
+  height: 30px;
+  font-size: 1rem;
+
+  background-color: transparent;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  border: none;
+  line-height: 1;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+.comprar .svg {
+  background-image: url('../icons/bag.svg');
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 20px;
+}
+@media (max-width: 1200px) {
+  .produto {
+    height: 270px;
+    width: 230px;
+  }
+  .produto img {
+    height: 100px;
+  }
+}
+@media (max-width: 1000px) {
+  .produtosContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 700px;
+  }
+  .produto {
+    height: 270px;
+    width: 230px;
+  }
+  .produto img {
+    height: 100px;
+  }
+}
